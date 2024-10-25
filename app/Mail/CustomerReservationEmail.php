@@ -31,7 +31,7 @@ class CustomerReservationEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Star Cafe Reservation Proof',
+            subject: 'Cafe Name Reservation Proof',
         );
     }
 
