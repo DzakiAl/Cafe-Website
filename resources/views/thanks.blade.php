@@ -10,7 +10,7 @@
 <body>
     <div class="thanks-container">
         <div>
-            <h1 class="thanks-sentence">Thanks for booking at Star Cafe</h1>
+            <h1 class="thanks-sentence">Thanks for booking at our cafe</h1>
             <p class="second-thanks-sentence">We will send proof of order to your email</p>
             <center><a href="{{route('index')}}" class="linkToHome">head back to home page</a></center>
         </div>

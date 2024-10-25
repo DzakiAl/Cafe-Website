@@ -32,7 +32,7 @@ class ReservationController extends Controller
         ];
 
         // Send email to hotel admin
-        Mail::to('starcafedmin@example.com')->send(new AdminReservationEmail($details));
+        Mail::to('admin@example.com')->send(new AdminReservationEmail($details));
 
         // Send confirmation email to customer
         Mail::to($request->email)->send(new CustomerReservationEmail($details));

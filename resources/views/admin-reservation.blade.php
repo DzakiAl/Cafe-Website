@@ -4,7 +4,7 @@
     <title>New Reservation!</title>
 </head>
 <body>
-    <h1>Star Cafe</h1>
+    <h1>Cafe Name</h1>
     <h2>New Reservation!</h2>
     <p><strong>Name:</strong> {{ $details['name'] }}</p>
     <p><strong>Email:</strong> {{ $details['email'] }}</p>
