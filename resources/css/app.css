@@ -1,0 +1,701 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+.brand {
+    margin: 0 0 0 1vw;
+    font-size: 2.5vw;
+    color: #7B3F00;
+    font-weight: 200;
+}
+
+.menu {
+    margin: 0 1vw 0 0;
+}
+
+.navbar-link {
+    position: relative;
+    font-size: 1.25vw;
+    color: #7B3F00;
+    text-decoration: none;
+}
+
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.1vw;
+    bottom: 0;
+    left: 0;
+    background-color: #7B3F00;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.navbar-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.hamburger-container {
+    display: none;
+}
+
+/* sidebar */
+.sidebar {
+    display: none;
+}
+
+/* home */
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cafe-slogan {
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 200;
+}
+
+.cafe-sub-slogan {
+    text-align: center;
+    font-size: 1.25vw;
+}
+
+.reservation-button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.reservation-button {
+    display: block;
+    background-color: #7B3F00;
+    color: white;
+    text-decoration: none;
+    width: 14vw;
+    height: 3vw;
+    line-height: 3vw;
+    font-size: 1.25vw;
+    text-align: center;
+    transition: all ease-in-out 0.25s;
+}
+
+.reservation-button:hover {
+    background-color: #603200;
+    color: rgb(214, 214, 214);
+    transition: all ease-in-out 0.25s;
+}
+
+.home-image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 2.5vw 0 5vw 0;
+}
+
+.home-image {
+    width: 30vw;
+    height: auto;
+    border-radius: 1vw;
+    margin: 0 0.5vw 0 0.5vw;
+}
+
+/* menu */
+.food-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-menu-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.food-menu-title {
+    font-size: 3vw;
+    font-weight: 200;
+    margin: 0;
+}
+
+.food-menu-underline {
+    width: 13.5vw;
+    height: 0.25vw;
+    background-color: #7B3F00;
+}
+
+.food-list-container {
+    display: flex;
+    width: 95%;
+    height: auto;
+    border-radius: 1vw;
+    box-shadow: 0 0 1vw 0.5vw #B5B5B5;
+    margin: 5vw 0 0 0;
+}
+
+.food-list-section {
+    width: 45%;
+    height: auto;
+    padding: 3vw;
+}
+
+.food-list-section-title {
+    margin: 0;
+    font-size: 2.5vw;
+    font-weight: 200;
+    text-align: center;
+    color: #7B3F00;
+}
+
+.foodNprice {
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-name {
+    font-size: 1.5vw;
+    margin: 0.5vw 0 0.5vw 0;
+}
+
+.food-price {
+    font-size: 1.55vw;
+    margin: 0.5vw 0 0.5vw 0;
+}
+
+/* reservation form */
+.reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 6vw 0 0 0;
+}
+
+.reservation-title {
+    font-size: 2.75vw;
+    font-weight: 200;
+    margin: 0;
+}
+
+.reservation-title-underline {
+    width: 15vw;
+    height: 0.25vw;
+    background-color: #7B3F00;
+    margin: 0 0 3vw 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+}
+
+.input {
+    width: 100%;
+    height: auto;
+    font-size: 1.25vw;
+    background-color: white;
+    border: none;
+    border-bottom: 0.25vw solid #7B3F00;
+    margin: 0 0 1.5vw 0;
+}
+
+.form-label {
+    font-size: 1.25vw;
+    margin: 0 0 0.5vw 0;
+}
+
+.submit-button {
+    width: 15vw;
+    height: 3vw;
+    font-size: 1.25vw;
+    border: none;
+    background-color: #7B3F00;
+    color: white;
+    margin: 0;
+    transition: all ease-in-out 0.25s;
+}
+
+.submit-button:hover {
+    background-color: #603200;
+    color: #B5B5B5;
+    transition: all ease-in-out 0.25s;
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    height: 20vh;
+    background-color: #7B3F00;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    color: white;
+}
+
+.copyright {
+    font-size: 1.25vw;
+}
+
+.footer-link {
+    font-size: 1.25vw;
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5vw 0 0.5vw;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* thanks page */
+.thanks-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.thanks-sentence {
+    text-align: center;
+    font-size: 4vw;
+}
+
+.second-thanks-sentence {
+    text-align: center;
+    font-size: 2vw;
+}
+
+.linkToHome {
+    font-size: 1.5vw;
+    color: black;
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+
+    /* navbar */
+    .navbar {
+        width: 100%;
+        height: 8vh;
+    }
+
+    .brand {
+        font-size: 7vw;
+        margin-left: 2vw;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .hamburger-container {
+        display: block;
+        margin-right: 2vw;
+    }
+
+    .hamburger {
+        display: block;
+        margin: 1.25vw 0 1.25vw 0;
+        background-color: #7B3F00;
+        width: 8vw;
+        height: 0.9vw;
+    }
+
+    /* sidebar */
+    .sidebar {
+        display: block;
+        position: fixed;
+        background: white;
+        width: 50%;
+        height: 100vh;
+        z-index: 1;
+        overflow-x: hidden;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        backdrop-filter: blur(1vw);
+        -webkit-backdrop-filter: blur(1vw);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .sidebar-link {
+        padding: 1vw 0 1vw 0;
+        text-align: center;
+    }
+
+    .sidebar-link a {
+        color: #7B3F00;
+        text-decoration: none;
+    }
+
+    /* home */
+    .cafe-slogan-container {
+        margin: 10vw 0 10vw 0;
+    }
+
+    .cafe-slogan {
+        font-size: 7vw;
+        font-weight: 200;
+        margin: 0 5vw 1vw 5vw;
+    }
+
+    .cafe-sub-slogan {
+        text-align: center;
+        font-size: 3vw;
+    }
+
+    .reservation-button-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .reservation-button {
+        width: 30vw;
+        height: 8vw;
+        line-height: 8vw;
+        font-size: 3vw;
+    }
+
+    .home-image-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 2.5vw 0 0 0;
+    }
+
+    .home-image {
+        width: 70vw;
+        height: auto;
+        margin: 2vw 0.5vw 0 0.5vw;
+    }
+
+    /* menu */
+    .food-menu-title-container {
+        width: 100%;
+    }
+
+    .food-menu-title {
+        font-size: 7vw;
+        margin: 10vw 0 0 0;
+    }
+
+    .food-menu-underline {
+        width: 30vw;
+        height: 0.5vw;
+        background-color: #7B3F00;
+    }
+
+    .food-list-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+        border-radius: 1vw;
+        margin: 5vw 0 0 0;
+    }
+
+    .food-list-section {
+        width: 90%;
+        height: auto;
+        padding: 5vw;
+    }
+
+    .food-list-section-title {
+        margin: 0;
+        font-size: 5vw;
+        font-weight: 200;
+    }
+
+    .foodNprice {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .food-name {
+        font-size: 4vw;
+        margin: 0.5vw 0 0.5vw 0;
+    }
+
+    .food-price {
+        font-size: 4vw;
+        margin: 0.5vw 0 0.5vw 0;
+    }
+
+    /* reservation form */
+    .reservation {
+        width: 100%;
+        height: 100vh;
+        margin: 6vw 0 0 0;
+    }
+
+    .reservation-title {
+        font-size: 7vw;
+        font-weight: 200;
+        margin: 0;
+    }
+
+    .reservation-title-underline {
+        width: 38vw;
+        height: 0.5vw;
+        margin: 0 0 3vw 0;
+    }
+
+    .form {
+        width: 90%;
+        height: auto;
+    }
+
+    .input {
+        width: 100%;
+        height: auto;
+        font-size: 4vw;
+        margin: 0 0 3vw 0;
+    }
+
+    .form-label {
+        font-size: 4vw;
+        margin: 0 0 0.5vw 0;
+    }
+
+    .submit-button {
+        width: 28vw;
+        height: 7vw;
+        font-size: 3vw;
+        margin: 0;
+    }
+
+    /* footer */
+    .footer {
+        width: 100%;
+        height: 18vh;
+    }
+
+    .contact {
+        height: 18vh;
+    }
+
+    .copyright {
+        font-size: 3vw;
+    }
+
+    .footer-link {
+        font-size: 3vw;
+        margin: 0 2vw 0 2vw;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1024px) and (orientation: portrait) {
+
+    /* navbar */
+    .navbar {
+        width: 100%;
+        height: 8vh;
+    }
+
+    .brand {
+        font-size: 4vw;
+    }
+
+    .menu {
+        margin: 0 2vw 0 0;
+    }
+
+    .navbar-link {
+        font-size: 2vw;
+    }
+
+    /* home */
+    .cafe-slogan-container {
+        margin: 10vw 0 10vw 0;
+    }
+
+    .cafe-slogan {
+        font-size: 5vw;
+        font-weight: 200;
+        margin: 0 0 1vw 0;
+    }
+
+    .cafe-sub-slogan {
+        text-align: center;
+        font-size: 2vw;
+    }
+
+    .reservation-button-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .reservation-button {
+        width: 18vw;
+        height: 4vw;
+        line-height: 4vw;
+        font-size: 1.5vw;
+    }
+
+    .home-image-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 2.5vw 0 0 0;
+    }
+
+    .home-image {
+        width: 45vw;
+        height: auto;
+        margin: 1vw 0.5vw 0 0.5vw;
+    }
+
+    /* menu */
+    .food-menu-title-container {
+        width: 100%;
+    }
+
+    .food-menu-title {
+        font-size: 5vw;
+        margin: 10vw 0 0 0;
+    }
+
+    .food-menu-underline {
+        width: 22vw;
+        height: 0.5vw;
+        background-color: #7B3F00;
+    }
+
+    .food-list-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        border-radius: 1vw;
+        margin: 5vw 0 0 0;
+    }
+
+    .food-list-section {
+        width: 90%;
+        height: auto;
+        padding: 3vw;
+    }
+
+    .food-list-section-title {
+        margin: 0;
+        font-size: 4vw;
+        font-weight: 200;
+    }
+
+    .foodNprice {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .food-name {
+        font-size: 3vw;
+        margin: 0.5vw 0 0.5vw 0;
+    }
+
+    .food-price {
+        font-size: 3vw;
+        margin: 0.5vw 0 0.5vw 0;
+    }
+
+    /* reservation form */
+    .reservation {
+        width: 100%;
+        height: 100vh;
+        margin: 6vw 0 0 0;
+    }
+
+    .reservation-title {
+        font-size: 5vw;
+        font-weight: 200;
+        margin: 0;
+    }
+
+    .reservation-title-underline {
+        width: 28vw;
+        height: 0.25vw;
+        margin: 0 0 3vw 0;
+    }
+
+    .form {
+        width: 90%;
+        height: auto;
+    }
+
+    .input {
+        width: 100%;
+        height: auto;
+        font-size: 3vw;
+        margin: 0 0 2vw 0;
+    }
+
+    .form-label {
+        font-size: 3vw;
+        margin: 0 0 0.5vw 0;
+    }
+
+    .submit-button {
+        width: 26vw;
+        height: 6vw;
+        font-size: 2.5vw;
+        margin: 0;
+    }
+
+    /* footer */
+    .footer {
+        width: 100%;
+        height: 18vh;
+    }
+
+    .contact {
+        height: 18vh;
+    }
+
+    .copyright {
+        font-size: 2.5vw;
+    }
+
+    .footer-link {
+        font-size: 2.5vw;
+        margin: 0 1vw 0 1vw;
+    }
+}
